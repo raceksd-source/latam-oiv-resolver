@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema.json",
+  "_meta": {
+    "country": "CL",
+    "status": "delegated",
+    "delegate": "anci-oiv-resolver",
+    "sourceCount": 915,
+    "note": "Chile dataset is held by the companion package anci-oiv-resolver. This file is a placeholder so the directory persists in version control."
+  },
+  "operators": []
+}

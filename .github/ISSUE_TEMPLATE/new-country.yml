@@ -1,0 +1,86 @@
+name: New country contribution
+description: Propose a new LATAM country dataset for inclusion in the registry.
+title: "[new-country] <ISO-3166 alpha-2> · <country name>"
+labels: ["new-country", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a new country dataset. Please complete the
+        sections below. Country stewardship is granted to contributors with
+        verifiable expertise on the country's regulatory framework.
+  - type: input
+    id: country
+    attributes:
+      label: Country (ISO 3166-1 alpha-2)
+      description: e.g. BR, MX, AR, UY, CO, PE, EC, CR, PA
+      placeholder: BR
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Country name (English)
+      placeholder: Brazil
+    validations:
+      required: true
+  - type: input
+    id: regulator
+    attributes:
+      label: Regulator / agency
+      placeholder: GSI/PR · Gabinete de Segurança Institucional
+    validations:
+      required: true
+  - type: textarea
+    id: framework
+    attributes:
+      label: Legal framework
+      description: Cite the national law(s), decree(s), or regulator publication(s).
+      placeholder: PNSI · Decreto 9.637/2018 · LGPD · Lei 13.709/2018
+    validations:
+      required: true
+  - type: input
+    id: identifier
+    attributes:
+      label: Primary identifier format
+      description: e.g. CNPJ (BR), RFC (MX), CUIT (AR)
+      placeholder: CNPJ — XX.XXX.XXX/XXXX-XX (14 digits)
+    validations:
+      required: true
+  - type: dropdown
+    id: registry
+    attributes:
+      label: Is there an official public operator registry?
+      options:
+        - "Yes — fully public"
+        - "Partial — sectoral or limited"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Public source URLs
+      description: One per line. No paywalled links.
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Initial sample (10–20 entities) for review
+      description: Suggested format - one per line - "<identifier>, <razón social>, <sector>, <domain>"
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Steward commitments
+      options:
+        - label: I have verifiable expertise on this country's regulatory framework.
+          required: true
+        - label: I will provide a `source.md` documenting the legal framework.
+          required: true
+        - label: All entries cite publicly accessible, non-paywalled sources.
+          required: true
+        - label: I have read the [Code of Conduct](../blob/main/CODE_OF_CONDUCT.md) and [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+          required: true

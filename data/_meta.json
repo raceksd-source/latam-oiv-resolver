@@ -1,0 +1,113 @@
+{
+  "name": "latam-oiv-resolver-atlas",
+  "description": "Canonical LATAM Critical Infrastructure Operator Atlas. Unified metadata for the multi-country registry of OIV-equivalent operators.",
+  "version": "0.1.0-alpha.1",
+  "schemaVersion": "1.0.0",
+  "generated": "2026-05-24T00:00:00Z",
+  "license": "Apache-2.0",
+  "maintainer": "David Mellafe Z. <david@reizan.io>",
+  "repository": "https://github.com/raceksd-source/latam-oiv-resolver",
+  "countries": [
+    {
+      "code": "CL",
+      "name": "Chile",
+      "regulator": "ANCI (Agencia Nacional de Ciberseguridad)",
+      "framework": "Ley 21.663 · Marco Nacional de Ciberseguridad (2024)",
+      "primaryIdentifier": "rut-cl",
+      "implemented": true,
+      "delegate": "anci-oiv-resolver",
+      "sourceCount": 915,
+      "lastVerified": "2026-05-24"
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "regulator": "Dirección Nacional de Ciberseguridad",
+      "framework": "Estrategia Nacional de Ciberseguridad",
+      "primaryIdentifier": "cuit-ar",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "regulator": "AGESIC",
+      "framework": "Marco Nacional de Ciberseguridad · AGESIC",
+      "primaryIdentifier": "rut-uy",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "BR",
+      "name": "Brasil",
+      "regulator": "GSI/PR (Gabinete de Segurança Institucional)",
+      "framework": "PNSI · Decreto 9.637/2018 · LGPD · Lei 13.709/2018",
+      "primaryIdentifier": "cnpj-br",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "regulator": "ColCERT · Ministerio TIC",
+      "framework": "CONPES 3854 · Política Nacional de Seguridad Digital",
+      "primaryIdentifier": "nit-co",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "MX",
+      "name": "México",
+      "regulator": "Guardia Nacional · Centro Nacional de Ciberseguridad",
+      "framework": "LFPDPPP · Sectores Estratégicos (LFCE 28)",
+      "primaryIdentifier": "rfc-mx",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "PE",
+      "name": "Perú",
+      "regulator": "DINI · PeCERT",
+      "framework": "DLeg 1412 · Política Nacional de Ciberseguridad 2030",
+      "primaryIdentifier": "ruc-pe",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador",
+      "regulator": "CERT-EC (ARCOTEL)",
+      "framework": "Política Nacional de Ciberseguridad",
+      "primaryIdentifier": "ruc-ec",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "regulator": "MICITT · CSIRT-CR",
+      "framework": "Estrategia Nacional de Ciberseguridad de Costa Rica",
+      "primaryIdentifier": "cedula-jur-cr",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    },
+    {
+      "code": "PA",
+      "name": "Panamá",
+      "regulator": "AIG · CSIRT Panamá",
+      "framework": "Estrategia Nacional de Ciberseguridad",
+      "primaryIdentifier": "ruc-pa",
+      "implemented": false,
+      "sourceCount": 0,
+      "lastVerified": null
+    }
+  ]
+}

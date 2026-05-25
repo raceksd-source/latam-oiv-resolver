@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+title: "latam-oiv-resolver: Canonical LATAM Critical Infrastructure Operator Registry"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - given-names: David
+    family-names: Mellafe Zuvic
+    affiliation: "Independent Security Researcher · Chile"
+    email: david@reizan.io
+identifiers:
+  - type: url
+    value: "https://github.com/raceksd-source/latam-oiv-resolver"
+repository-code: "https://github.com/raceksd-source/latam-oiv-resolver"
+url: "https://dmzs.dev/research"
+abstract: >-
+  Canonical Latin American Critical Infrastructure Operator Registry.
+  First multi-country resolver for "Operadores de Importancia Vital" (OIV)
+  equivalents across LATAM regulatory frameworks (CL · BR · MX · CO · AR ·
+  UY · PE · EC · CR · PA). Provides a unified JSON Schema and TypeScript API
+  to resolve critical-infrastructure operators across heterogeneous national
+  identifier formats (RUT · CPF/CNPJ · RFC · CUIT · CC · DNI · RUC).
+  Chile (CL) data is provided via the companion package anci-oiv-resolver
+  v0.5.0. Companion publication forthcoming: "The Coverage Gap in LATAM
+  Critical Infrastructure Cybersecurity" (Mellafe, 2026).
+keywords:
+  - latam
+  - latin-america
+  - cybersecurity
+  - ciberseguridad
+  - critical-infrastructure
+  - infraestructura-critica
+  - infraestrutura-critica
+  - oiv
+  - chile
+  - brazil
+  - mexico
+  - argentina
+  - colombia
+  - uruguay
+  - peru
+  - vulnerability-disclosure
+  - divulgacion-responsable
+  - iso-29147
+  - rut
+  - cpf
+  - cnpj
+license: Apache-2.0
+version: 0.1.0-alpha.1
+date-released: "2026-05-24"
+preferred-citation:
+  type: software
+  title: "latam-oiv-resolver: Canonical LATAM Critical Infrastructure Operator Registry"
+  authors:
+    - given-names: David
+      family-names: Mellafe Zuvic
+      email: david@reizan.io
+  year: 2026
+  version: 0.1.0-alpha.1
+  url: "https://github.com/raceksd-source/latam-oiv-resolver"
+  license: Apache-2.0

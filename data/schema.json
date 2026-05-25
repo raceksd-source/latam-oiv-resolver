@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/raceksd-source/latam-oiv-resolver/main/data/schema.json",
+  "title": "LATAM Critical Infrastructure Operator Record",
+  "description": "Unified record format for an OIV-equivalent operator across LATAM jurisdictions. All per-country datasets under data/countries/{cc}/known-domains.json MUST validate against this schema.",
+  "type": "object",
+  "required": ["country", "identifier", "identifierType", "razonSocial", "sector", "source"],
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country code (uppercase).",
+      "enum": ["CL", "AR", "UY", "BR", "CO", "MX", "PE", "EC", "CR", "PA"]
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Normalized national identifier in canonical form for the country.",
+      "minLength": 4,
+      "maxLength": 30
+    },
+    "identifierType": {
+      "type": "string",
+      "description": "Identifier scheme used for the value above.",
+      "enum": [
+        "rut-cl",
+        "cnpj-br",
+        "cpf-br",
+        "rfc-mx",
+        "cuit-ar",
+        "cuil-ar",
+        "rut-uy",
+        "nit-co",
+        "ruc-pe",
+        "ruc-ec",
+        "cedula-jur-cr",
+        "ruc-pa",
+        "unknown"
+      ]
+    },
+    "razonSocial": {
+      "type": "string",
+      "description": "Legal name of the operator as published by the national regulator.",
+      "minLength": 2
+    },
+    "domain": {
+      "type": ["string", "null"],
+      "description": "Primary web domain of the operator, or null if unresolved.",
+      "pattern": "^[a-z0-9]([a-z0-9\\-]{0,61}[a-z0-9])?(\\.[a-z0-9]([a-z0-9\\-]{0,61}[a-z0-9])?)+$"
+    },
+    "sector": {
+      "type": "string",
+      "description": "Country-agnostic sector taxonomy.",
+      "enum": [
+        "banking_finance",
+        "telecommunications",
+        "electricity",
+        "oil_gas",
+        "water_sanitation",
+        "transport",
+        "health",
+        "public_administration",
+        "state_enterprise",
+        "digital_infrastructure",
+        "unknown"
+      ]
+    },
+    "sectorLocal": {
+      "type": "string",
+      "description": "Country-specific sector label as used by the national regulator."
+    },
+    "source": {
+      "type": "string",
+      "description": "Provenance of the record.",
+      "enum": [
+        "official-registry",
+        "companion-package",
+        "community-curated",
+        "heuristic",
+        "stub"
+      ]
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public URL where the source publication is hosted."
+    },
+    "sourceDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the regulator publication used for this record (YYYY-MM-DD)."
+    },
+    "verified": {
+      "type": ["boolean", "null"],
+      "description": "DNS-verifiable status of the domain at submission time. null if not checked."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence band 0–1. 1.0 indicates a canonical registry match."
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional free-form note (regulator references, caveats)."
+    }
+  },
+  "additionalProperties": false
+}

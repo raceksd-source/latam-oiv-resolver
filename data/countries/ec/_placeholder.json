@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema.json",
+  "_meta": {
+    "country": "EC",
+    "status": "stub",
+    "sourceCount": 0,
+    "note": "Awaiting contribution. See source.md."
+  },
+  "operators": []
+}

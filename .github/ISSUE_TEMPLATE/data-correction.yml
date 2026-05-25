@@ -1,0 +1,58 @@
+name: Data correction
+description: Report an incorrect entry in a country dataset.
+title: "[data] <country> · <razón social>"
+labels: ["data-correction", "needs-triage"]
+body:
+  - type: input
+    id: country
+    attributes:
+      label: Country (ISO 3166-1 alpha-2)
+      placeholder: CL
+    validations:
+      required: true
+  - type: input
+    id: identifier
+    attributes:
+      label: National identifier
+      description: e.g. RUT for CL, CNPJ for BR
+      placeholder: 97006000-6
+    validations:
+      required: true
+  - type: input
+    id: razonSocial
+    attributes:
+      label: Legal name (razón social)
+      placeholder: BANCO DE CRÉDITO E INVERSIONES
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field to correct
+      options:
+        - "domain"
+        - "sector"
+        - "razonSocial spelling"
+        - "identifier formatting"
+        - "other"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current value
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Public source supporting the correction
+      description: Regulator publication URL or other public source.
+    validations:
+      required: true

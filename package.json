@@ -1,0 +1,105 @@
+{
+  "name": "latam-oiv-resolver",
+  "version": "0.1.0-alpha.1",
+  "description": "Canonical LATAM Critical Infrastructure Operator Registry. Multi-country resolver for OIV-equivalent operators across Latin American cybersecurity frameworks (CL · BR · MX · CO · AR · UY · PE · EC · CR · PA).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./normalizers": {
+      "import": "./dist/normalizers/index.js",
+      "types": "./dist/normalizers/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./dist/types.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test test/*.test.ts",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "latam",
+    "latin-america",
+    "america-latina",
+    "cybersecurity",
+    "ciberseguridad",
+    "critical-infrastructure",
+    "infraestructura-critica",
+    "infraestrutura-critica",
+    "oiv",
+    "operadores-importancia-vital",
+    "chile",
+    "brazil",
+    "brasil",
+    "mexico",
+    "argentina",
+    "colombia",
+    "uruguay",
+    "peru",
+    "ecuador",
+    "costa-rica",
+    "panama",
+    "anci",
+    "ley-21663",
+    "lgpd",
+    "vulnerability-disclosure",
+    "divulgacion-responsable",
+    "iso-29147",
+    "rut",
+    "cpf",
+    "cnpj",
+    "rfc",
+    "cuit"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/raceksd-source"
+  },
+  "author": "David Mellafe Z. <david@reizan.io>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raceksd-source/latam-oiv-resolver.git"
+  },
+  "homepage": "https://github.com/raceksd-source/latam-oiv-resolver#readme",
+  "bugs": {
+    "url": "https://github.com/raceksd-source/latam-oiv-resolver/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "anci-oiv-resolver": "^0.5.0"
+  },
+  "peerDependenciesMeta": {
+    "anci-oiv-resolver": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.4",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^10.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "files": [
+    "dist/",
+    "data/",
+    "LICENSE",
+    "README.md",
+    "README.es.md",
+    "README.pt-br.md"
+  ]
+}
