@@ -37,7 +37,7 @@ import type {
  */
 export async function resolveOperator(
   input: OperatorIdentifier,
-  options: ResolveOptions = {}
+  _options: ResolveOptions = {}
 ): Promise<ResolvedOperator> {
   const adapter = await getAdapter(input.country);
   return adapter.resolve(input);
@@ -49,7 +49,7 @@ export async function resolveOperator(
  */
 export async function resolveBatch(
   inputs: OperatorIdentifier[],
-  options: ResolveOptions = {}
+  _options: ResolveOptions = {}
 ): Promise<ResolvedOperator[]> {
   // Group inputs by country so each adapter is loaded at most once.
   const groups = new Map<LATAMCountry, OperatorIdentifier[]>();

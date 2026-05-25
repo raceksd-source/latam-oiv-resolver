@@ -106,7 +106,9 @@ export const clAdapter: CountryAdapter = {
       domain: inner.domain ?? null,
       razonSocial: inner.razonSocial ?? input.razonSocial ?? null,
       sector: mapAnciSector(inner.sector),
-      sectorLocal: inner.sector,
+      // exactOptionalPropertyTypes: conditionally include sectorLocal only when defined
+      // (assigning `undefined` to an optional property violates the strict contract)
+      ...(inner.sector !== undefined && { sectorLocal: inner.sector }),
       source: inner.source === 'known-domains' ? 'companion-package' : 'heuristic',
       confidence: typeof inner.confidence === 'number' ? inner.confidence : 0,
       verified: inner.verified ?? null,
