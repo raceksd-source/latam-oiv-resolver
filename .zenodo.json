@@ -1,0 +1,49 @@
+{
+  "title": "latam-oiv-resolver: Multi-country Latin American Critical Infrastructure Operator Registry Resolver",
+  "description": "<p>Multi-country canonical resolver for critical infrastructure operators (CI/OIV equivalents) across Latin American regulatory frameworks. Unified JSON Schema and TypeScript API supporting Chile (Ley 21.663) · Argentina (Decreto 92/2026) · Brasil (PNSC) · Colombia (CONPES 3854) · México (ENC + IFT/CNBV) · Uruguay (AGESIC) with 323 operators indexed across 5 implemented countries (AR · BR · CO · MX · UY) and 5 in pilot (PE · EC · CR · PA · DO). Apache 2.0 license · npm published · companion tool to forthcoming LATAM Atlas paper.</p>",
+  "creators": [
+    {
+      "name": "Mellafe Zuvic, David",
+      "affiliation": "Independent Researcher · operating Reizan via AlmaAI SpA (RUT 78.387.715-5)",
+      "orcid": "0009-0001-3950-2505"
+    }
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "cybersecurity",
+    "critical infrastructure",
+    "LATAM",
+    "latin america",
+    "vulnerability disclosure",
+    "ISO/IEC 29147",
+    "OSINT",
+    "multi-country",
+    "RUT",
+    "CNPJ",
+    "RFC",
+    "CUIT",
+    "NIT",
+    "regulatory framework",
+    "OIV",
+    "open source",
+    "npm",
+    "TypeScript"
+  ],
+  "language": "eng",
+  "notes": "Multi-country resolver companion to forthcoming LATAM Atlas paper · canonical at https://reizan.io/papers · operated by AlmaAI SpA · RUT 78.387.715-5",
+  "communities": [],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.npmjs.com/package/latam-oiv-resolver",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/raceksd-source/anci-oiv-resolver",
+      "relation": "isPartOf",
+      "resource_type": "software"
+    }
+  ]
+}
